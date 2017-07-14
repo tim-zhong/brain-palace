@@ -1,0 +1,4 @@
+{>"page" title="{title}"/}
+{<headContent}
+    <link rel='stylesheet' href='{@resource path="css/welcome.css"/}'>
+{/headContent}
