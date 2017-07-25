@@ -27,6 +27,7 @@ function getWelcomeHtml(req, res) {
      };
      res.render('welcome-page', {
          content: ReactDOMServer.renderToString(React.createElement(WelcomePage, props)),
-         title: 'Welcome Page'
+         title: 'Welcome Page',
+         props: props
      });
 }
