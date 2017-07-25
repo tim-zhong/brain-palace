@@ -2,3 +2,6 @@
 {<headContent}
     <link rel='stylesheet' href='{@resource path="css/welcome.css"/}'>
 {/headContent}
+{<javascript}
+    <script src="js/welcome.min.js"></script>
+{/javascript}

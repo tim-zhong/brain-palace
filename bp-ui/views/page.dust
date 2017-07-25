@@ -12,8 +12,11 @@
     </head>
     <body>
         <div class="main-content">
-            {content|s}
+            <main id="page-content">
+                {content|s}
+            </main>
         </div>
+        <script id='props' type='application/json'>{props|js|s}</script>
         {+javascript/}
     </body>
 </html>
