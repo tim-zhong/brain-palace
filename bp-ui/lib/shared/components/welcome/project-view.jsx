@@ -19,20 +19,20 @@ var ProjectView = React.createClass({
 
     loadProjects: function() {
         console.log();
-        xhr('http://localhost:3000/api/projects', {dataType: 'json'}, function(error, data) {
+        xhr('http://localhost:4000/api/projects', {dataType: 'json'}, function(error, response) {
             if(error) {
                 // ...
                 console.log(error);
                 return;
             }
-            this.setState({projects: data});
+            this.setState({projects: response.data});
         }.bind(this));
     },
 
     render: function() {
         return (
             <div>
-                <h2>project-list</h2>
+                <h2>list</h2>
                 <ProjectTilesView projects={this.state.projects}/>
             </div>
         );

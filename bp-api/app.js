@@ -15,7 +15,7 @@ exports.server = app;
 app.use(function (req, res, next) {
 
     // Website you wish to allow to connect
-    res.setHeader('Access-Control-Allow-Origin', 'http://localhost:3001');
+    res.setHeader('Access-Control-Allow-Origin', 'http://localhost:4001');
 
     // Request methods you wish to allow
     res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, PATCH, DELETE');
@@ -32,7 +32,7 @@ app.get('/api/projects', function(req, res){
         if(e) throw Error(e);
     });
 
-    var qs = 'SELECT * from `projects`;';
+    var qs = 'SELECT `project-name` from `projects`;';
 
     var q = couchbase.N1qlQuery.fromString(qs);
 

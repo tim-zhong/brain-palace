@@ -5,5 +5,5 @@
 'use strict';
 
 var app = require('./app.js');
-app.server.listen('3000');
-console.log('Listening on port 3000');
+app.server.listen('4000');
+console.log('Listening on port 4000');

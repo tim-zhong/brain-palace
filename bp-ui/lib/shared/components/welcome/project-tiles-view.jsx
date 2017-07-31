@@ -2,17 +2,19 @@
  * Created by timzhong on 2017-07-17.
  */
 'use strict';
-var React = require('react');
+
+var React = require('react'),
+    ProjectTile = require('./project-tile.jsx');
 
 var ProjectTilesView = React.createClass({
     render: function() {
         return (
             <div className="project-list">
-                <h2>project-tiles-view</h2>
                 {(()=>{
-                    var result = [];
+                    return this.props.projects.map(function(project, i) {
+                        return <ProjectTile key={i} name={project['project-name']}/>;
+                    }.bind(this));
 
-                    return result;
                 })()}
             </div>
         );

@@ -2,7 +2,8 @@
  * Created by timzhong on 2017-07-25.
  */
 'use strict';
-var path = require('path');
+var path = require('path'),
+    ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 module.exports = {
     entry: {
@@ -23,14 +24,25 @@ module.exports = {
         rules: [
             {
                 test: /\.jsx$/,
-                exclude: /(node_modules)/,
+                exclude: /node_modules|\.scss/,
                 use: {
                     loader: 'babel-loader',
                     options: {
                         presets: ['react', 'es2015'],
                     }
                 },
-            }
+            },
+            {
+                test: /\.scss$/,
+                use: ExtractTextPlugin.extract({
+                    fallback: 'style-loader',
+                    use: ['css-loader','postcss-loader','sass-loader']
+                })
+            },
         ]
-    }
+    },
+
+    plugins: [
+        new ExtractTextPlugin("css/[name].css")
+    ]
 };

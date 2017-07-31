@@ -1,6 +1,6 @@
 {>"page" title="{title}"/}
 {<headContent}
-    <link rel='stylesheet' href='{@resource path="css/welcome.css"/}'>
+    <link rel='stylesheet' href='css/welcome.css'>
 {/headContent}
 {<javascript}
     <script src="js/welcome.min.js"></script>
