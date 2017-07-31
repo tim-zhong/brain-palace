@@ -2,5 +2,13 @@
 @import "../common/mixins";
 
 .project-tile{
-  border: 1px solid red;
+  width:100%;
+  position: relative;
+  padding:16px;
+  border: 1px solid $bp-border-grey0;
+  box-sizing: border-box;
+  background: #fff;
+  margin-bottom:16px;
+
+  @include box-shadow();
 }

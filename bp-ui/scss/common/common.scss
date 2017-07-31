@@ -1,0 +1,21 @@
+@import url('https://fonts.googleapis.com/css?family=Zilla+Slab:300,400,600');
+
+body {
+  margin: 0;
+  position: relative;
+  font-family: 'Zilla Slab', serif;
+  background: #f5f7fa;
+}
+
+a{
+  text-decoration: none;  
+}
+
+.cwidth {
+  width: 1000px;
+  margin: 0 auto;
+
+  @media screen and (max-width: 1000px) {
+    width:95%;
+  }
+}

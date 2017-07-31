@@ -1,0 +1,12 @@
+@import '../common/colors';
+@import '../common/mixins';
+
+.button {
+  padding:10px 15px;
+  @include box-shadow();
+
+  &.btn-success {
+    color: #fff;
+    background: $bp-button-green0;
+  }
+}

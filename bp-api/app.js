@@ -32,7 +32,7 @@ app.get('/api/projects', function(req, res){
         if(e) throw Error(e);
     });
 
-    var qs = 'SELECT `project-name` from `projects`;';
+    var qs = 'SELECT `project_name` from `projects`;';
 
     var q = couchbase.N1qlQuery.fromString(qs);
 

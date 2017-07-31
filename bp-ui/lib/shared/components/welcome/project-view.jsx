@@ -4,7 +4,14 @@
 'use strict';
 var React = require('react'),
     xhr = require('../../../client/xhr'),
-    ProjectTilesView = require('./project-tiles-view.jsx');
+    ProjectTilesView = require('./project-tiles-view.jsx'),
+    Banner = require('../common/banner.jsx'),
+    Button = require('../common/button.jsx'),
+    resources = require('../../resources');
+
+resources(function() {
+    require('../../../../scss/welcome/_project-view.scss');
+});;
 
 var ProjectView = React.createClass({
     getInitialState: function() {
@@ -31,8 +38,12 @@ var ProjectView = React.createClass({
 
     render: function() {
         return (
-            <div>
-                <h2>list</h2>
+            <div className="project-view">
+                <Banner title="Projects">
+                    <div className="project-view-actions">
+                        <Button href="new-project" text="New project" className="btn-success"/>
+                    </div>
+                </Banner>
                 <ProjectTilesView projects={this.state.projects}/>
             </div>
         );

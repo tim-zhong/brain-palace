@@ -1,0 +1,11 @@
+@import '../common/colors';
+@import '../common/mixins';
+
+.project-view {
+
+  .project-view-actions {
+    display: inline-flex;
+    width: 100%;
+    justify-content: flex-end;
+  }
+}
