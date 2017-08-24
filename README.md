@@ -1,2 +1,12 @@
-# nodejs-starter-code
-Starter code for my Node.js projects
+# A Practice Project (Isomorphic app)
+- Node.js
+- Express
+
+## Frontend
+- React
+- Dust.js
+- Webpack
+- Sass
+
+## Backend
+- Couchbase
