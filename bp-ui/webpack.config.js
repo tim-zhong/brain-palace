@@ -8,6 +8,7 @@ var path = require('path'),
 module.exports = {
     entry: {
         'welcome': './lib/shared/components/welcome/welcome-page.jsx',
+        'create': './lib/shared/components/create/create-page.jsx',
         'common': './scss/common/common.scss'
     },
 

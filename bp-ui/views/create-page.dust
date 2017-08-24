@@ -1,0 +1,7 @@
+{>"page" title="{title}"/}
+{<headContent}
+    <link rel='stylesheet' href='css/create.css'>
+{/headContent}
+{<javascript}
+    <script src="js/create.min.js"></script>
+{/javascript}

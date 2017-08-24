@@ -8,7 +8,8 @@ var express = require('express'),
     dust = require('dustjs-linkedin'),
     consolidate = require('consolidate');
 
-var welcome = require('./controllers/welcome');
+var welcome = require('./controllers/welcome'),
+    create = require('./controllers/create');
 
 var app = express();
 app.engine('.dust', consolidate.dust);
@@ -21,6 +22,7 @@ app.set('view engine', 'dust');
 
 var router = express.Router();
 router.all('/', welcome);
+router.all('/create', create);
 
 app.use(router);
 

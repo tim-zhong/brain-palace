@@ -41,7 +41,7 @@ var ProjectView = React.createClass({
             <div className="project-view">
                 <Banner title="Projects">
                     <div className="project-view-actions">
-                        <Button href="new-project" text="New project" className="btn-success"/>
+                        <Button href="create" text="New project" className="btn-success"/>
                     </div>
                 </Banner>
                 <ProjectTilesView projects={this.state.projects}/>
